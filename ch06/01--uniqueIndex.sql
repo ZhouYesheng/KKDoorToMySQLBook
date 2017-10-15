@@ -17,3 +17,14 @@ CREATE TABLE t_dept(
 );
 
 
+#创建无索引部门表
+CREATE TABLE t_dept(
+	deptno INT,
+	dname VARCHAR(20),
+	loc VARCHAR(40)
+);
+
+#在已经存在的表上创建唯一索引
+CREATE UNIQUE INDEX index_dept
+	ON t_dept(deptno);
+
