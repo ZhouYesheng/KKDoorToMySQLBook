@@ -30,3 +30,6 @@ CREATE TABLE t_dept(
 CREATE index index_dname_loc
 	ON t_dept(dname,loc);
 
+#修改表时建立多列索引
+ALTER TABLE t_dept
+	ADD INDEX index_dname_loc(dname,loc);
