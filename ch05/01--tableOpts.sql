@@ -47,3 +47,10 @@ ALTER TABLE t_dept
 #指定字段后面添加字段
 ALTER TABLE t_dept
 	ADD addr VARCHAR(20) AFTER loc;
+
+#删除字段
+ALTER TABLE t_dept
+	DROP addr;
+
+#查看表描述
+DESC t_dept;
