@@ -20,3 +20,6 @@ DESCRIBE t_dept;
 
 #使用show展示创建表的语句
 SHOW CREATE TABLE t_dept;
+
+#删除表
+DROP TABLE t_dept;
