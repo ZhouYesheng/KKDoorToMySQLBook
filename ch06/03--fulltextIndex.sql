@@ -29,3 +29,7 @@ CREATE TABLE t_dept(
 #在已存表上建立全文索引
 CREATE FULLTEXT INDEX index_loc
 	ON t_dept(loc);
+
+#修改已有表建立全文索引
+ALTER TABLE t_dept
+	ADD FULLTEXT index index_detp(loc);
