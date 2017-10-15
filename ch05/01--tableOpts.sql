@@ -23,3 +23,10 @@ SHOW CREATE TABLE t_dept;
 
 #删除表
 DROP TABLE t_dept;
+
+#检查表是否存在
+DESC t_dept;
+
+#修改表名字
+ALTER TABLE t_dept
+	RENAME TO tab_dept;
