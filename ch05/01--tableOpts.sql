@@ -70,3 +70,11 @@ DESCRIBE t_dept;
 #最后参数分别为新字段名+新数据类型
 ALTER TABLE t_dept
 	CHANGE location loc VARCHAR(100);
+
+#调整loc到头部
+ALTER TABLE t_dept
+	MODIFY loc VARCHAR(100) FIRST;
+
+#调整deptno到dname之后
+ALTER TABLE t_dept
+	MODIFY deptno INT AFTER dname;
