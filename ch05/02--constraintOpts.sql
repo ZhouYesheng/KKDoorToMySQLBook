@@ -19,3 +19,20 @@ CREATE TABLE t_dept(
 	dname VARCHAR(20) DEFAULT '秘书处',
 	loc VARCHAR(40)
 );
+
+#创建匿名唯一约束UK
+CREATE TABLE t_dept(
+	id INT UNIQUE,
+	deptno INT NOT NULL,
+	dname VARCHAR(20) DEFAULT '秘书处',
+	loc VARCHAR(40)
+);
+
+#创建有名唯一性约束
+CREATE TABLE t_dept(
+	id INT,
+	deptno INT NOT NULL,
+	dname VARCHAR(20) DEFAULT '秘书处',
+	loc VARCHAR(40),
+	CONSTRAINT uk_id UNIQUE(id)
+);
