@@ -58,3 +58,10 @@ DESC t_dept;
 #修改字段类型
 ALTER TABLE t_dept
 	MODIFY deptno VARCHAR(20);
+
+#修改字段名
+ALTER TABLE t_dept
+	CHANGE loc location VARCHAR(40);
+
+#查看表描述
+DESCRIBE t_dept;
