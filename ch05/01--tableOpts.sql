@@ -54,3 +54,7 @@ ALTER TABLE t_dept
 
 #查看表描述
 DESC t_dept;
+
+#修改字段类型
+ALTER TABLE t_dept
+	MODIFY deptno VARCHAR(20);
