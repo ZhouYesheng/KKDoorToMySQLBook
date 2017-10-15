@@ -12,3 +12,7 @@ CREATE VIEW view_selectproducts AS
 #直接创建或替换旧的视图
 CREATE OR REPLACE VIEW view_selectproducts AS
 	SELECT name FROM t_product;
+
+#使用alter直接修改旧的视图
+ALTER VIEW view_selectproducts AS
+	SELECT name FROM t_product;
