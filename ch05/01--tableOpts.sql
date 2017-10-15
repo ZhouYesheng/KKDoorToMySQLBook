@@ -31,3 +31,11 @@ DESC t_dept;
 #修改表名字
 ALTER TABLE t_dept
 	RENAME TO tab_dept;
+
+#修改表名字
+ALTER TABLE tab_dept
+	RENAME TO t_dept;
+
+#最后位置增加字段
+ALTER TABLE t_dept
+	ADD descri VARCHAR(20);
