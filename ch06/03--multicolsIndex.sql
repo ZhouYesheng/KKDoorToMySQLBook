@@ -18,10 +18,15 @@ EXPLAIN
 	SELECT * FROM t_dept WHERE deptno=1;
 
 
-#创建表的时候使用多可索引
+#创建表的时候使用多列索引
 CREATE TABLE t_dept(
 	deptno INT,
 	dname VARCHAR(20),
 	loc VARCHAR(40),
 	INDEX index_dname_loc(dname,loc)
 );
+
+#在已有表上建立多列索引
+CREATE index index_dname_loc
+	ON t_dept(dname,loc);
+
