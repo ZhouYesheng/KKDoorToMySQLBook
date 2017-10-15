@@ -65,3 +65,8 @@ ALTER TABLE t_dept
 
 #查看表描述
 DESCRIBE t_dept;
+
+#同时修改字段名和类型
+#最后参数分别为新字段名+新数据类型
+ALTER TABLE t_dept
+	CHANGE location loc VARCHAR(100);
