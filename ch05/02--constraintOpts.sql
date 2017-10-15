@@ -36,3 +36,26 @@ CREATE TABLE t_dept(
 	loc VARCHAR(40),
 	CONSTRAINT uk_id UNIQUE(id)
 );
+
+#创建匿名单主键字段
+CREATE TABLE t_dept(
+	deptno INT PRIMARY KEY,
+	dname VARCHAR(20),
+	loc VARCHAR(40)
+);
+
+#创建有名主键约束
+CREATE TABLE t_dept(
+	deptno INT,
+	dname VARCHAR(20),
+	loc VARCHAR(40),
+	CONSTRAINT pk_deptno PRIMARY KEY(deptno)
+);
+
+#创建有名多字段主键约束
+CREATE TABLE t_dept(
+	deptno INT,
+	dname VARCHAR(20),
+	loc VARCHAR(40),
+	CONSTRAINT pk_deptno_dname PRIMARY KEY(deptno,dname)
+);
