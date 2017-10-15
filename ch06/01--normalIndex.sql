@@ -28,3 +28,7 @@ CREATE TABLE t_dept(
 #在普通表上建立索引
 CREATE INDEX index_deptno
 	ON t_dept(deptno);
+
+#修改表时候创建索引
+ALTER TABLE t_dept
+	ADD INDEX index_deptno(deptno);
