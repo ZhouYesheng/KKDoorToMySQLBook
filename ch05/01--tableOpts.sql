@@ -43,3 +43,7 @@ ALTER TABLE t_dept
 #第一个位置增加字段
 ALTER TABLE t_dept
 	ADD id INT FIRST;
+
+#指定字段后面添加字段
+ALTER TABLE t_dept
+	ADD addr VARCHAR(20) AFTER loc;
