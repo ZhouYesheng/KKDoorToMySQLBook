@@ -39,3 +39,7 @@ ALTER TABLE tab_dept
 #最后位置增加字段
 ALTER TABLE t_dept
 	ADD descri VARCHAR(20);
+
+#第一个位置增加字段
+ALTER TABLE t_dept
+	ADD id INT FIRST;
