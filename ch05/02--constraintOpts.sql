@@ -59,3 +59,10 @@ CREATE TABLE t_dept(
 	loc VARCHAR(40),
 	CONSTRAINT pk_deptno_dname PRIMARY KEY(deptno,dname)
 );
+
+#创建自增约束主键
+CREATE TABLE t_dept(
+	deptno INT PRIMARY KEY AUTO_INCREMENT,
+	dname VARCHAR(20),
+	loc VARCHAR(40)
+);
