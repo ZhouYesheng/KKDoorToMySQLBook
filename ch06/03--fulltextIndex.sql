@@ -24,3 +24,8 @@ CREATE TABLE t_dept(
 	loc VARCHAR(40),
 	FULLTEXT INDEX index_loc(loc)
 );
+
+
+#在已存表上建立全文索引
+CREATE FULLTEXT INDEX index_loc
+	ON t_dept(loc);
