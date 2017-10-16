@@ -63,3 +63,4 @@ INSERT INTO t_dept(dname,loc)
 #插入从loader表中的查询结果到部门表dept
 INSERT INTO t_dept(dname,loc)
 	SELECT dname,loc FROM t_loader;
+
