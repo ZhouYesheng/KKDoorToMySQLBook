@@ -22,3 +22,6 @@ SELECT * FROM t_dept;
 
 #删除特定记录
 DELETE FROM t_dept WHERE dname='cjgong1';
+
+#无条件删除所有记录
+DELETE FROM t_dept;
