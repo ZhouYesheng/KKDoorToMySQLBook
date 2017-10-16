@@ -32,3 +32,11 @@ INSERT INTO t_dept
 		(3,'cjgong3','ShangeHai3'),
 		(4,'cjgong4','ShangeHai4'),
 		(5,'cjgong5','ShangeHai5');
+
+#插入多条部分记录
+INSERT INTO t_dept(dname,loc)
+	VALUES('cjgong1','ShangeHai1'),
+		('cjgong2','ShangeHai2'),
+		('cjgong3','ShangeHai3'),
+		('cjgong4','ShangeHai4'),
+		('cjgong5','ShangeHai5');
