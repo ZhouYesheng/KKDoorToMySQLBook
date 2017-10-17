@@ -26,8 +26,6 @@ CREATE TABLE t_employee(
 	sal DECIMAL(10,2),
 	comm DECIMAL(10,2),
 	deptno INT,
-	CONSTRAINT fk_deptno
-		FOREIGN KEY(deptno) REFERENCES t_dept(deptno)
 );
 
 #查看员工表
