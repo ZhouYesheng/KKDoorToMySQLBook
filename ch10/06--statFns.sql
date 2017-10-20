@@ -18,4 +18,6 @@ SELECT AVG(comm) AS aver FROM t_employee
 	WHERE NOT comm=0;
 
 
-
+#求和查询
+SELECT SUM(sal) AS allSals FROM t_employee
+	WHERE NOT comm=0;
