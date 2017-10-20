@@ -16,3 +16,6 @@ SELECT AVG(comm) AS aver FROM t_employee;
 
 SELECT AVG(comm) AS aver FROM t_employee
 	WHERE NOT comm=0;
+
+
+
