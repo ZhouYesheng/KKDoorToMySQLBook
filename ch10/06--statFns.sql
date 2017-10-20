@@ -21,3 +21,16 @@ SELECT AVG(comm) AS aver FROM t_employee
 #求和查询
 SELECT SUM(sal) AS allSals FROM t_employee
 	WHERE NOT comm=0;
+	
+#极值查询
+SELECT MAX(sal) AS maxSal,
+	MIN(sal) AS minSal FROM t_employee;
+
+#极值查询--忽略null
+SELECT MAX(comm) AS maxComm,
+	MIN(comm) AS minComm FROM t_employee;
+
+#极值查询--附加条件
+SELECT MAX(comm) AS maxComm,
+	MIN(comm) AS minComm FROM t_employee
+	WHERE NOT comm=0;
