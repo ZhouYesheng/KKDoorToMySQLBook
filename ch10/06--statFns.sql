@@ -43,3 +43,58 @@ SELECT AVG(deptno) AS avgNo,
 	SUM(deptno) AS sumNo,
 	MAX(deptno) AS maxNo,
 	MIN(deptno) AS minNO FROM t_dept;
+
+#分组查询全部
+SELECT * FROM t_employee
+	GROUP BY deptno;
+
+#分组查询全部
+#无重复值字段分组，无意义
+SELECT * FROM t_employee
+	GROUP BY empno;
+
+#拼接分组中的指定字段值
+SELECT deptno,
+       GROUP_CONCAT(ename) AS enames
+	FROM t_employee GROUP BY deptno;
+
+#拼接分组中的指定字段值
+SELECT deptno,
+       GROUP_CONCAT(ename) AS enames,
+	COUNT(ename) AS num
+	FROM t_employee GROUP BY deptno;
+
+#多字段分组
+SELECT deptno,Hiredate FROM t_employee
+	GROUP BY deptno,Hiredate;
+
+
+#查询某字段的分组数
+SELECT deptno FROM t_employee
+	GROUP BY deptno;
+
+#显示每个分组指定字段的平均值
+SELECT deptno,AVG(sal) avgSal FROM t_employee
+	GROUP BY deptno;
+
+#分组后条件筛选
+SELECT deptno,
+	AVG(sal) avgSal,
+	GROUP_CONCAT(ename) enames,
+	COUNT(ename) number FROM t_employee
+	GROUP BY deptno HAVING AVG(sal)>2000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
