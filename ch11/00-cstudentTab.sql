@@ -1,5 +1,5 @@
 ####
-#学生C表
+#计算机学生表
 ###
 #创建学生c表
 CREATE TABLE t_cstudent(

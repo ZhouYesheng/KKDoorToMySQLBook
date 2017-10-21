@@ -1,5 +1,5 @@
 ####
-#学生M表
+#音乐学生表
 ###
 #创建学生m表
 CREATE TABLE t_mstudent(
