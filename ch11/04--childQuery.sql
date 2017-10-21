@@ -57,3 +57,26 @@ SELECT * FROM t_employee a,t_dept c
 SELECT deptno,dname FROM t_dept c
 	WHERE NOT EXISTS
 		(SELECT * FROM t_employee WHERE deptno=c.deptno);
+
+#内连接实例
+#查询员工表中的
+#各部门【按部门分组】
+#的部门号、部门名称、部门地址、雇员人数和平均工资【员工表，部门表，部门编号相等】
+SELECT d.deptno,d.dname,d.loc,
+	COUNT(e.ename) number,AVG(e.sal) avgSal
+	FROM t_employee e INNER JOIN t_dept d
+	ON e.deptno=d.deptno
+	GROUP BY d.deptno DESC,d.dname,d.loc;
+
+#多行多列子查询——作为主查询的临时表查询
+#查询员工表中的
+#各部门的部门号、雇员人数、平均工资【员工表，按分组统计】
+#和部门名称、部门地址【员工表，部门表，部门编号相等】
+SELECT d.deptno,d.dname,d.loc,number,avgSal
+	FROM t_dept d
+	INNER JOIN
+		(
+			SELECT deptno dno,COUNT(empno) number,AVG(sal) avgSal
+			FROM t_employee GROUP BY deptno DESC
+		) employee
+	ON d.deptno=employee.dno;
