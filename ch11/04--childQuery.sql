@@ -44,6 +44,6 @@ SELECT ename,sal FROM t_employee
 #查询工资比所有经理【经理的工资，子查询，员工表】
 #都要高的所有员工【主查询，员工表】
 SELECT ename,sal FROM t_employee
-	WHERE sal>ANY
+	WHERE sal>ALL
 		(SELECT sal FROM t_employee WHERE job='MANAGER');
 
