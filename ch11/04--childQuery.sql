@@ -32,3 +32,10 @@ SELECT * FROM t_employee
 SELECT * FROM t_employee
 	WHERE deptno NOT IN
 		(SELECT deptno FROM t_dept);
+
+#子查询--ANY至少一个（作为主查询的条件参考）
+#查询工资比至少一个经理【经理的工资，子查询，员工表】
+#要高的所有员工【主查询，员工表】
+SELECT ename,sal FROM t_employee
+	WHERE sal>ANY
+		(SELECT sal FROM t_employee WHERE job='MANAGER');
