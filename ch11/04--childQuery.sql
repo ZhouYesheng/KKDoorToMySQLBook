@@ -18,3 +18,10 @@ SELECT * FROM t_employee
 SELECT ename,sal,job FROM t_employee
 	WHERE (sal,job) =
 		(SELECT sal,job FROM t_employee WHERE ename='SMITH');
+
+#多行单列--IN（作为主查询范围的参考值）
+#查询部门编号在部门表【子查询，部门表】中
+#的所有员工【主查询，员工表】
+SELECT * FROM t_employee
+	WHERE deptno IN
+		(SELECT deptno FROM t_dept);
