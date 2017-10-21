@@ -20,3 +20,10 @@ SELECT  e.ename employeename,
 		l.ename loadername
 	 FROM t_employee e,t_employee l
 	 WHERE e.mgr=l.empno;
+
+#等值连接
+#查询员工关联的部门
+SELECT e.empno,e.ename,e.job,
+		d.dname,d.loc
+		FROM t_employee e INNER JOIN t_dept d
+		ON e.deptno=d.deptno;
