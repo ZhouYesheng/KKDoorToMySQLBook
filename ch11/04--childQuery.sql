@@ -25,3 +25,10 @@ SELECT ename,sal,job FROM t_employee
 SELECT * FROM t_employee
 	WHERE deptno IN
 		(SELECT deptno FROM t_dept);
+
+#多行单列--NOT IN（作为主查询范围的参考值）
+#查询部门编号不在部门表【子查询，部门表】中
+#的所有员工【主查询，员工表】
+SELECT * FROM t_employee
+	WHERE deptno NOT IN
+		(SELECT deptno FROM t_dept);
