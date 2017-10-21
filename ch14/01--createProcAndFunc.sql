@@ -23,3 +23,4 @@ BEGIN
 	RETURN (SELECT sal FROM t_employee e WHERE e.empno=empno);
 END$$
 DELIMITER ;
+
