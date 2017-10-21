@@ -64,8 +64,22 @@ SELECT e.empno,e.ename employeename,e.sal,e.job,
 	FROM t_employee e,t_employee l,t_dept d
 	WHERE e.mgr=l.empno AND l.deptno=d.deptno;
 
+#内连不等查询
+#查询员工的姓名、职位
+#编号大于自己的领导姓名（自连接）
+SELECT e.ename employeename,e.job,
+	l.ename loadername
+	FROM t_employee e
+	INNER JOIN t_employee l
+	ON e.mgr=l.empno AND e.empno>l.empno;
 
-
+#内连不等查询[WHERE形式]
+#查询员工的姓名、职位
+#编号大于自己的领导姓名（自连接）
+SELECT e.ename employeename,e.job,
+	l.ename loadername
+	FROM t_employee e,t_employee l
+	WHERE e.mgr=l.empno AND e.empno>l.empno;
 
 
 
