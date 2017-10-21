@@ -14,3 +14,4 @@ SELECT 6+4 加法,
 #算数运算符——操作字段
 SELECT ename 雇员,sal 月工资,sal*12 年薪
 	FROM t_employee;
+
