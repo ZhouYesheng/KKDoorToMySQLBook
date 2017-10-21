@@ -47,3 +47,13 @@ SELECT ename,sal FROM t_employee
 	WHERE sal>ALL
 		(SELECT sal FROM t_employee WHERE job='MANAGER');
 
+#查询部门编号在部门表中的所有员工
+SELECT * FROM t_employee a,t_dept c
+	WHERE a.deptno=c.deptno;
+
+#子查询——NOT EXISTES（不在子查询结果范围）
+#查询没有员工【有员工的部门，员工表，部门表，编号相等】
+#的部门的编号和名称【主查询，部门表】
+SELECT deptno,dname FROM t_dept c
+	WHERE NOT EXISTS
+		(SELECT * FROM t_employee WHERE deptno=c.deptno);
