@@ -39,3 +39,11 @@ SELECT * FROM t_employee
 SELECT ename,sal FROM t_employee
 	WHERE sal>ANY
 		(SELECT sal FROM t_employee WHERE job='MANAGER');
+
+#子查询--ALL全部匹配(作为主查询的条件的参考范围)
+#查询工资比所有经理【经理的工资，子查询，员工表】
+#都要高的所有员工【主查询，员工表】
+SELECT ename,sal FROM t_employee
+	WHERE sal>ANY
+		(SELECT sal FROM t_employee WHERE job='MANAGER');
+
